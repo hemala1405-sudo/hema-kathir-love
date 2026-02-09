@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For My Kathir ❤️</title>
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+  background-size: 400% 400%;
+  animation: gradientBG 8s ease infinite;
+  overflow: hidden;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.heart {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background: red;
+  transform: rotate(-45deg);
+  animation: beat 1s infinite;
+}
+
+.heart:before,
+.heart:after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: red;
+  border-radius: 50%;
+}
+
+.heart:before {
+  top: -125px;
+  left: 0;
+}
+
+.heart:after {
+  left: 125px;
+  top: 0;
+}
+
+@keyframes beat {
+  0%, 100% { transform: rotate(-45deg) scale(1); }
+  50% { transform: rotate(-45deg) scale(1.1); }
+}
+
+.text {
+  position: absolute;
+  transform: rotate(45deg);
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  width: 250px;
+  top: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px white; }
+  to { text-shadow: 0 0 20px yellow; }
+}
+
+button {
+  position: absolute;
+  top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: white;
+  color: #ff4e50;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<button onclick="playMusic()">💖 Click for Surprise 💖</button>
+
+<div class="heart">
+  <div class="text">
+    💖 Hema & Kathir 💖 <br><br>
+    🥰 You are my happiness 🌈<br>
+    💍 Will you stay with me forever?
+  </div>
+</div>
+
+<div class="footer">
+  👩‍❤️‍👨 💕 👫 💕 👩‍❤️‍👨 <br>
+  💖 Kathir I Love You 💖
+</div>
+
+<!-- Background Music -->
+<audio id="bgMusic" loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mp3">
+</audio>
+
+<script>
+function playMusic() {
+  document.getElementById("bgMusic").play();
+}
+</script>
+
+</body>
+</html>
